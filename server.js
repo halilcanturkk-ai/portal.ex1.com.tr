@@ -13,25 +13,20 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// STATIC FILES (LOGIN, DASHBOARD, ADMIN)
 app.use(express.static(path.join(__dirname, 'public')));
 
-// API ROUTES
 app.use('/api/auth', authRoutes);
 app.use('/api/requests', requestRoutes);
 app.use('/api/users', userRoutes);
 
-// HEALTH CHECK
 app.get('/api/health', (req, res) => res.json({ ok: true, time: new Date().toISOString() }));
 
-// PORT
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 3000;
 
-// START SERVER
 initDb().then(async () => {
   await seedAdmin();
-  app.listen(PORT, () => console.log(`EX1 Portal running on port ${PORT}`));
+  app.listen(PORT, () => console.log(`Portal running at http://localhost:${PORT}`));
 }).catch(err => {
-  console.error('DB INIT ERROR:', err);
+  console.error('DB init error', err);
   process.exit(1);
 });

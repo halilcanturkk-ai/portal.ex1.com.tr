@@ -1,10 +1,11 @@
 {
-  "name": "zirvetrans-ex1-portal",
+  "name": "zirvetrans-ex1-portal-v1_4",
   "version": "1.4.0",
-  "description": "Zirve Trans EX1 Portal - TR/EN/FR çoklu dil, admin paneli, müşteri paneli, evrak yükleme, mail bildirimi",
+  "description": "Zirve Trans EX1 Portal - i18n TR/EN/FR, file naming standard, user mgmt/pricing, email notify",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -13,8 +14,12 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "multer": "^1.4.5-lts.1",
-    "nodemailer": "^6.9.15",
     "sqlite3": "^5.1.7",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "nodemailer": "^6.9.15",
+    "twilio": "^5.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
   }
 }

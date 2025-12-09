@@ -1,24 +1,14 @@
-# EX1 Portal - Zirve Trans
-TR/EN/FR çoklu dil desteğine sahip EX1 Evrak Yönetim Portalı.
+# Zirve Trans EX1 Portal (V1.4)
 
-## Özellikler
-- Müşteri kayıt & giriş
-- Admin paneli
-- EX1 talep oluşturma
-- Müşteri evrak yükleme
-- Admin işlem evrağı yükleme
-- Mail bildirimi (SMTP)
-- Çoklu dil: TR / EN / FR
-- Dosya isim standardı
-- Kullanıcı yönetimi (fiyatlandırma, aktif/pasif)
-- Render / Node.js hosting uyumlu
+Yeni özellikler:
+1) Çoklu dil TR/EN/FR toggle (login, müşteri, admin panelleri)
+2) Evraklara otomatik isim standardı (display_name):
+   - Format: REQUESTID_source_timestamp_original.ext
+3) Kullanıcı yönetimi / fiyatlandırma:
+   - Admin panelinde kullanıcı tablosu
+   - Fiyat/Talep, para birimi, aktif-pasif
+   - Pasif kullanıcı giriş yapamaz.
 
-## Teknolojiler
-- Node.js (Express)
-- SQLite3
-- JWT Authentication
-- Multer (dosya yükleme)
-- Nodemailer (mail)
-- HTML/CSS/JS frontend
-
-## Kurulum (LOCAL)
+Kurulum:
+npm install
+npm start

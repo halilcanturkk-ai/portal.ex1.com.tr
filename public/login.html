@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>EX1 Portal - Giriş</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #f5f6fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-box {
+      background: #fff;
+      padding: 30px;
+      width: 350px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 12px;
+      background: #1e90ff;
+      border: none;
+      color: #fff;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .lang-select {
+      text-align: right;
+      margin-bottom: 10px;
+    }
+    .lang-select button {
+      margin-left: 5px;
+      background: #ddd;
+      padding: 5px 10px;
+      border-radius: 5px;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-box">
+    <div class="lang-select">
+      <button onclick="setLang('tr')">TR</button>
+      <button onclick="setLang('en')">EN</button>
+      <button onclick="setLang('fr')">FR</button>
+    </div>
+
+    <h2 data-i18n="login_title">Portal Giriş</h2>
+
+    <input id="phone" placeholder="Telefon" data-i18n-placeholder="login_phone">
+    <input id="password" type="password" placeholder="Şifre" data-i18n-placeholder="login_password">
+
+    <button onclick="login()" data-i18n="login_button">Giriş Yap</button>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>EX1 Portal - Müşteri Paneli</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #eef2f7;
+    }
+    header {
+      background: #1e90ff;
+      padding: 15px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+    }
+    .lang-select button {
+      margin-left: 5px;
+      padding: 4px 9px;
+      border-radius: 5px;
+      border: none;
+    }
+    .box {
+      background: #fff;
+      margin: 20px auto;
+      padding: 20px;
+      width: 95%;
+      max-width: 700px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 12px;
+      background: #1e90ff;
+      border: none;
+      color: #fff;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    .request-item {
+      padding: 10px;
+      background: #fafafa;
+      border-radius: 6px;
+      margin-top: 10px;
+      border: 1px solid #ddd;
+    }
+    #whatsapp-support {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      padding: 15px;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 24px;
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div>
+      <b data-i18n="dashboard_title">Müşteri Paneli</b>
+    </div>
+    <div class="lang-select">
+      <button onclick="setLang('tr')">TR</button>
+      <button onclick="setLang('en')">EN</button>
+      <button onclick="setLang('fr')">FR</button>
+    </div>
+  </header>
+
+  <div class="box">
+    <h3 data-i18n="new_request">Yeni EX1 Talebi Oluştur</h3>
+
+    <select id="exit_office">
+      <option value="BG005807">BG005807 - Kapitan Andreevo</option>
+      <option value="FR001234">FR001234 - Strasbourg</option>
+      <option value="IT009999">IT009999 - Ventimiglia</option>
+    </select>
+
+    <input id="eori_number" placeholder="EORI" data-i18n-placeholder="eori_placeholder">
+    <textarea id="notes" placeholder="Notlar (opsiyonel)"></textarea>
+
+    <button onclick="createRequest()" data-i18n="create_request_button">Talep Oluştur</button>
+  </div>
+
+  <div class="box">
+    <h3 data-i18n="my_requests">Taleplerim</h3>
+    <div id="requests"></div>
+  </div>
+
+  <a id="whatsapp-support" href="https://wa.me/905555555555" target="_blank">💬</a>
+
+  <script src="assets/app.js"></script>
+  <script>
+    loadRequests();
+  </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>EX1 Portal - Admin Paneli</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #eef2f7;
+      padding-bottom: 100px;
+    }
+    header {
+      background: #343a40;
+      padding: 15px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+    }
+    .lang-select button {
+      margin-left: 5px;
+      padding: 4px 9px;
+      border-radius: 5px;
+      border: none;
+    }
+    .box {
+      background: #fff;
+      margin: 20px auto;
+      padding: 20px;
+      width: 95%;
+      max-width: 900px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .item {
+      padding: 10px;
+      background: #fafafa;
+      border-radius: 6px;
+      margin-top: 10px;
+      border: 1px solid #ddd;
+    }
+    button {
+      padding: 10px 15px;
+      background: #1e90ff;
+      border: none;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    input, select {
+      padding: 7px;
+      margin-left: 5px;
+    }
+    .upload-box {
+      margin-top: 10px;
+      border: 1px dashed #999;
+      padding: 15px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div>
+      <b data-i18n="admin_title">Admin Paneli</b>
+    </div>
+    <div class="lang-select">
+      <button onclick="setLang('tr')">TR</button>
+      <button onclick="setLang('en')">EN</button>
+      <button onclick="setLang('fr')">FR</button>
+    </div>
+  </header>
+
+  <div class="box">
+    <h3 data-i18n="requests_list">Tüm EX1 Talepleri</h3>
+    <div id="requests"></div>
+  </div>
+
+  <div class="box">
+    <h3 data-i18n="users_list">Kullanıcı Yönetimi</h3>
+    <div id="users"></div>
+  </div>
+
+  <script src="assets/app.js"></script>
+
+  <script>
+    loadAdminRequests();
+    loadUsers();
+  </script>
+</body>
+</html>

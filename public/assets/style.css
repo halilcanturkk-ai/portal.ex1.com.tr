@@ -1,0 +1,75 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #f4f6f9;
+}
+
+h2, h3 {
+  margin-top: 0;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background: #1e90ff;
+  color: #fff;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #1875d3;
+}
+
+.box {
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  width: 95%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+.item {
+  padding: 12px;
+  background: #fafafa;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+}
+
+.lang-select button {
+  background: #ddd;
+  color: black;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.lang-select button:hover {
+  background: #bbb;
+}
+
+#whatsapp-support {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  padding: 15px;
+  border-radius: 50%;
+  color: #fff !important;
+  font-size: 25px;
+  text-decoration: none !important;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
